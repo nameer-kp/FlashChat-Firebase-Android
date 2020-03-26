@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        applicationId "com.londonappbrewery.flashchatnewfirebase"
+        applicationId "com.nameerkp.flashchatnewfirebase"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -16,12 +16,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    buildToolsVersion = '29.0.3'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.google.firebase:firebase-database:9.0.0'
+    implementation 'com.google.firebase:firebase-auth:9.0.0'
     implementation 'com.android.support:design:26.1.0'
 
 
 }
+apply plugin: 'com.google.gms.google-services'
